@@ -10,8 +10,18 @@
         update_cache: yes
     - name: Pip requirements
       pip:
-        virtualenv: /home/ubuntu/.venv
+        virtualenv: ${HOME}/.venv
         name:
           - django
           - djangorestframework
+    - name: Start project
+      shell: |
+        . ${HOME}/.venv/bin/activate
+        django-admin startproject setup . 
+    - name: Update line-in-file
+      lineinfile:
+        path: ${HOME}/setup/settings.py
+        regexp: 'ALLOWED_HOSTS'
+        line: 'ALLOWED_HOSTS = ["*"]'
+        backrefs: yes
 ...
