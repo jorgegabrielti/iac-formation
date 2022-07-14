@@ -39,7 +39,8 @@
 /*/.*lock.hcl
 
 # Secrets
-/*/*.pem
+/*/env/*/*.pem
+/*/env/*/*.pem.pub
 
 /*/hosts.yaml
 
