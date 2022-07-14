@@ -41,7 +41,6 @@ terraform.rc
 # Secrets
 *.pem
 
-# Hosts
-*./hosts.yaml
+hosts.yaml
 
 # End of https://www.toptal.com/developers/gitignore/api/terraform
