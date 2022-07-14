@@ -38,7 +38,10 @@ override.tf.json
 terraform.rc
 .*lock.hcl
 
-	# Secrets
+# Secrets
 *.pem
+
+# Hosts
+./hosts.yaml
 
 # End of https://www.toptal.com/developers/gitignore/api/terraform
