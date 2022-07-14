@@ -3,6 +3,8 @@
 
 ### Terraform ###
 # Local .terraform directories
+.*/*.tfstate*
+
 **/*/.terraform/*
 
 # .tfstate files
@@ -22,10 +24,10 @@
 
 # Ignore override files as they are usually used to override resources locally and so
 # are not checked in
-/*/override.tf
-/*/override.tf.json
-/*/*_override.tf
-/*/*_override.tf.json
+project*/*/override.tf
+project*/*/override.tf.json
+project*/*/*_override.tf
+project*/*/*_override.tf.json
 
 # Include override files you do wish to add to version control using negated pattern
 # !example_override.tf
@@ -34,9 +36,9 @@
 # example: *tfplan*
 
 # Ignore CLI configuration files
-/*/.terraformrc
-/*/terraform.rc
-/*/.*lock.hcl
+project*/*/.terraformrc
+project*/*/terraform.rc
+project*/*/.*lock.hcl
 
 # Secrets
 /*/env/*/*.pem
@@ -45,3 +47,9 @@
 /*/hosts.yaml
 
 # End of https://www.toptal.com/developers/gitignore/api/terraform
+
+project3/infra/*.terraform*
+project3/env/*/*.terraform*
+project3/env/*/*.tfstate*
+
+project2/*.terraform*
