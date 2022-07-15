@@ -5,3 +5,7 @@ module "aws_dev" {
   region        = "us-east-1"
   ssh_key       = "development.pem"
 }
+
+output "ip" {
+  value = module.aws_dev.public_ip
+}
