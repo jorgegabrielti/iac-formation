@@ -37,4 +37,9 @@
       shell: |
         . ${HOME}/tcc/.venv/bin/activate
         python3 ${HOME}/tcc/manage.py loaddata clientes.json
+
+    - name: Start server
+      shell: |
+        . ${HOME}/tcc/.venv/bin/activate
+        nohup python ${HOME}/tcc/manage.py runserver 0.0.0.0:8000 &
 ...
